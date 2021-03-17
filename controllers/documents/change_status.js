@@ -298,7 +298,19 @@ exports.request = function(req, res) {
                     concern.q14_value,
                     concern.q14_explanation,
                     concern.q14_filename,
-                    concern.q14_filepath
+                    concern.q14_filepath,
+                    concern.q15_1_value,
+                    concern.q15_1_explanation,
+                    concern.q15_1_filename,
+                    concern.q15_1_filepath,
+                    concern.q15_2_value,
+                    concern.q15_2_explanation,
+                    concern.q15_2_filename,
+                    concern.q15_2_filepath,
+                    concern.q15_3_value,
+                    concern.q15_3_explanation,
+                    concern.q15_3_filename,
+                    concern.q15_3_filepath
                 ], function(err, result) {
                     done();
                     if (err) {

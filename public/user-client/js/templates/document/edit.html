@@ -1944,7 +1944,228 @@
                     </div>
                 </div>
             </div>
+	     	<!-- 15.1. concern -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 justified">
+                    <div class="form-group" ng-class="{'has-danger': editDocumentForm.q15_1_value.$invalid && !editDocumentForm.q15_1_value.$pristine }">
+                        <label for="q15_1_value">
+                            <b>15.1. {{ 'CONCERN_15_1' | translate }}?</b> <sup class="text-danger">*</sup>
+                            <br>
+                            <small class="text-muted">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i> {{ 'CONCERN_15_1_INFO' | translate }}
+                            </small>
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-addon" style="background-color: #FFFFFF;">
+                                <label class="custom-control custom-radio" style="margin-bottom: 0px;">
+                                    <input
+                                        class="custom-control-input"
+                                        type="radio"
+                                        name="q15_1_value"
+                                        id="q15_1_value_1"
+                                        ng-model="latest_revision.concerns.q15_1_value"
+                                        ng-value="false"
+                                        required>
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">
+                                        {{ 'NO' | translate }}
+                                    </span>
+                                </label>
+                            </span>
+                            <span class="input-group-addon" style="background-color: #FFFFFF;">
+                                <label class="custom-control custom-radio" style="margin-bottom: 0px;">
+                                    <input
+                                        class="custom-control-input"
+                                        type="radio"
+                                        name="q15_1_value"
+                                        id="q15_1_value_2"
+                                        ng-model="latest_revision.concerns.q15_1_value"
+                                        ng-value="true"
+                                        required>
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">
+                                        {{ 'YES' | translate }}
+                                    </span>
+                                </label>
+                            </span>
+                        </div>
+                        <span ng-show="editDocumentForm.q15_1_value.$error.required && !editDocumentForm.q15_1_value.$pristine" class="text-danger">
+                            <small>
+                                {{ 'REQUIRED' | translate }}
+                            </small>
+                        </span>
+                    </div>
+                    <div class="form-group" ng-class="{'has-danger': editDocumentForm.q15_1_explanation.$invalid && !editDocumentForm.q15_1_explanation.$pristine }">
+                        <div class="input-group" ng-if="latest_revision.concerns.q15_1_value">
+                            <textarea
+                                class="form-control"
+                                rows="5"
+                                placeholder="{{ 'EXPLANATION' | translate }}"
+                                name="q15_1_explanation"
+                                id="q15_1_explanation"
+                                ng-model="latest_revision.concerns.q15_1_explanation"
+                                ng-required="latest_revision.concerns.q15_1_value"></textarea>
+                            <span class="input-group-addon">
+                                <span class="flag-icon flag-icon-gb"></span>
+                            </span>
+                        </div>
+                        <span ng-show="editDocumentForm.q15_1_explanation.$error.required && !editDocumentForm.q15_1_explanation.$pristine" class="text-danger">
+                            <small>
+                                {{ 'REQUIRED' | translate }}
+                            </small>
+                        </span>
+                    </div>
+                </div>
+            </div>
 
+            <!-- 15.2. concern -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 justified">
+                    <div class="form-group" ng-class="{'has-danger': editDocumentForm.q15_2_value.$invalid && !editDocumentForm.q15_2_value.$pristine }">
+                        <label for="q15_2_value">
+                            <b>15.2. {{ 'CONCERN_15_2' | translate }}?</b> <sup class="text-danger">*</sup>
+                            <!--<br>
+                            <small class="text-muted">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i> {{ 'CONCERN_15_2_INFO' | translate }}
+                            </small>-->
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-addon" style="background-color: #FFFFFF;">
+                                <label class="custom-control custom-radio" style="margin-bottom: 0px;">
+                                    <input
+                                        class="custom-control-input"
+                                        type="radio"
+                                        name="q15_2_value"
+                                        id="q15_2_value_1"
+                                        ng-model="latest_revision.concerns.q15_2_value"
+                                        ng-value="false"
+                                        required>
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">
+                                        {{ 'NO' | translate }}
+                                    </span>
+                                </label>
+                            </span>
+                            <span class="input-group-addon" style="background-color: #FFFFFF;">
+                                <label class="custom-control custom-radio" style="margin-bottom: 0px;">
+                                    <input
+                                        class="custom-control-input"
+                                        type="radio"
+                                        name="q15_2_value"
+                                        id="q15_2_value_2"
+                                        ng-model="latest_revision.concerns.q15_2_value"
+                                        ng-value="true"
+                                        required>
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">
+                                        {{ 'YES' | translate }}
+                                    </span>
+                                </label>
+                            </span>
+                        </div>
+                        <span ng-show="editDocumentForm.q15_2_value.$error.required && !editDocumentForm.q15_2_value.$pristine" class="text-danger">
+                            <small>
+                                {{ 'REQUIRED' | translate }}
+                            </small>
+                        </span>
+                    </div>
+                    <div class="form-group" ng-class="{'has-danger': editDocumentForm.q15_2_explanation.$invalid && !editDocumentForm.q15_2_explanation.$pristine }">
+                        <div class="input-group" ng-if="latest_revision.concerns.q15_2_value">
+                            <textarea
+                                class="form-control"
+                                rows="5"
+                                placeholder="{{ 'EXPLANATION' | translate }}"
+                                name="q15_2_explanation"
+                                id="q15_2_explanation"
+                                ng-model="latest_revision.concerns.q15_2_explanation"
+                                ng-required="latest_revision.concerns.q15_2_value"></textarea>
+                            <span class="input-group-addon">
+                                <span class="flag-icon flag-icon-gb"></span>
+                            </span>
+                        </div>
+                        <span ng-show="editDocumentForm.q15_2_explanation.$error.required && !editDocumentForm.q15_2_explanation.$pristine" class="text-danger">
+                            <small>
+                                {{ 'REQUIRED' | translate }}
+                            </small>
+                        </span>
+                    </div>
+                </div>
+            </div>
+	<!-- 15.3. concern -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 justified">
+                    <div class="form-group" ng-class="{'has-danger': editDocumentForm.q15_3_value.$invalid && !editDocumentForm.q15_3_value.$pristine }">
+                        <label for="q15_3_value">
+                            <b>15.3. {{ 'CONCERN_15_3' | translate }}?</b> <sup class="text-danger">*</sup>
+                            <!--<br>
+                            <small class="text-muted">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i> {{ 'CONCERN_15_3_INFO' | translate }}
+                            </small>-->
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-addon" style="background-color: #FFFFFF;">
+                                <label class="custom-control custom-radio" style="margin-bottom: 0px;">
+                                    <input
+                                        class="custom-control-input"
+                                        type="radio"
+                                        name="q15_3_value"
+                                        id="q15_3_value_1"
+                                        ng-model="latest_revision.concerns.q15_3_value"
+                                        ng-value="false"
+                                        required>
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">
+                                        {{ 'NO' | translate }}
+                                    </span>
+                                </label>
+                            </span>
+                            <span class="input-group-addon" style="background-color: #FFFFFF;">
+                                <label class="custom-control custom-radio" style="margin-bottom: 0px;">
+                                    <input
+                                        class="custom-control-input"
+                                        type="radio"
+                                        name="q15_3_value"
+                                        id="q15_3_value_2"
+                                        ng-model="latest_revision.concerns.q15_3_value"
+                                        ng-value="true"
+                                        required>
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">
+                                        {{ 'YES' | translate }}
+                                    </span>
+                                </label>
+                            </span>
+                        </div>
+                        <span ng-show="editDocumentForm.q15_3_value.$error.required && !editDocumentForm.q15_3_value.$pristine" class="text-danger">
+                            <small>
+                                {{ 'REQUIRED' | translate }}
+                            </small>
+                        </span>
+                    </div>
+                    <div class="form-group" ng-class="{'has-danger': editDocumentForm.q15_3_explanation.$invalid && !editDocumentForm.q15_3_explanation.$pristine }">
+                        <div class="input-group" ng-if="latest_revision.concerns.q15_3_value">
+                            <textarea
+                                class="form-control"
+                                rows="5"
+                                placeholder="{{ 'EXPLANATION' | translate }}"
+                                name="q15_3_explanation"
+                                id="q15_3_explanation"
+                                ng-model="latest_revision.concerns.q15_3_explanation"
+                                ng-required="latest_revision.concerns.q15_3_value"></textarea>
+                            <span class="input-group-addon">
+                                <span class="flag-icon flag-icon-gb"></span>
+                            </span>
+                        </div>
+                        <span ng-show="editDocumentForm.q15_3_explanation.$error.required && !editDocumentForm.q15_3_explanation.$pristine" class="text-danger">
+                            <small>
+                                {{ 'REQUIRED' | translate }}
+                            </small>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+ 
         </div>
         <div class="card-footer">
             <div class="row">
@@ -1961,7 +2182,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Submit -->
     <div class="card" ng-show="tab==3">

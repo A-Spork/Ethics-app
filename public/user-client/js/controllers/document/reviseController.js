@@ -16,7 +16,7 @@ app.controller("documentReviseController", function($scope, $rootScope, $filter,
     $scope.redirect = function(path){
         $location.url(path);
     };
-    
+
     /**
      * []
      */
@@ -24,7 +24,7 @@ app.controller("documentReviseController", function($scope, $rootScope, $filter,
         $scope.uploadstatus = "fail";
         $scope.latest_revision.concerns.q14_filename = null;
     };
-    
+
     /**
      * [upload file]
      * @return {[type]} [file]
@@ -288,6 +288,9 @@ app.controller("documentReviseController", function($scope, $rootScope, $filter,
             $scope.editDocumentForm.q12_value.$pristine = false;
             $scope.editDocumentForm.q13_value.$pristine = false;
             $scope.editDocumentForm.q14_value.$pristine = false;
+            $scope.editDocumentForm.q15_1_value.$pristine = false;
+            $scope.editDocumentForm.q15_2_value.$pristine = false;
+            $scope.editDocumentForm.q15_3_value.$pristine = false;
 
             // Conerns (explanations)
             if($scope.editDocumentForm.q01_explanation){
@@ -335,6 +338,15 @@ app.controller("documentReviseController", function($scope, $rootScope, $filter,
             if($scope.editDocumentForm.q14_explanation){
                 $scope.editDocumentForm.q14_explanation.$pristine = false;
             }
+            if($scope.editDocumentForm.q15_1_explanation){
+                $scope.editDocumentForm.q15_1_explanation.$pristine = false;
+            }
+            if($scope.editDocumentForm.q15_2_explanation){
+                $scope.editDocumentForm.q15_2_explanation.$pristine = false;
+            }
+            if($scope.editDocumentForm.q15_3_explanation){
+                $scope.editDocumentForm.q15_3_explanation.$pristine = false;
+            }
 
             $window.alert($filter('translate')('ALERT_SUBMIT_DOCUMENT_FAILED'));
         } else {
@@ -359,7 +371,7 @@ app.controller("documentReviseController", function($scope, $rootScope, $filter,
     $scope.document = $documentService.get();
     $scope.latest_revision = $documentService.getLatestRevision();
     $scope.tab = 0;
-    
+
     // Check status
     if($documentService.getStatus()>1 && $documentService.getStatus()!=5){
         // Redirect
@@ -406,7 +418,7 @@ app.controller("documentReviseController", function($scope, $rootScope, $filter,
             comments: true
         }
     };
-    
+
     // Show all comments and history
     $scope.toggle('general', 'history');
     $scope.toggle('descriptions', 'history', 'en');
@@ -421,7 +433,7 @@ app.controller("documentReviseController", function($scope, $rootScope, $filter,
         $scope.toggle('descriptions', 'language', 'de');
     }
     $scope.toggle('concerns', 'history');
-    
+
     if ($scope.latest_revision.concerns.q14_filename !== null) {
         $scope.uploadstatus= 'success';
     }

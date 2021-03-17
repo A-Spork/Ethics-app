@@ -114,7 +114,10 @@ exports.request = function(req, res) {
                 req.body.q11_2_comment,
                 req.body.q12_comment,
                 req.body.q13_comment,
-                req.body.q14_comment
+                req.body.q14_comment,
+                req.body.q15_1_comment,
+                req.body.q15_2_comment,
+                req.body.q15_3_comment
             ], function(err, result) {
                 done();
                 if (err) {

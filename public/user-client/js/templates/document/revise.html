@@ -3073,6 +3073,303 @@
                         </div>
                     </div>
                 </div>
+                <!-- 15.1st question -->
+                <div class="list-group-item">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 justified">
+                            <b>15.1. {{ 'CONCERN_15_1' | translate }}?</b>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                            <div ng-repeat="revision in document.revisions | orderBy: ['version']:true | limitTo: status.concerns.limit">
+                                <div class="row" ng-style="!$last && {'padding-bottom':'2px', 'border-bottom':'1px dashed rgba(0, 0, 0, .125)'}">
+                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                        <code>{{ 'REV' | translate}}{{revision.version}}</code>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" ng-if="!$first">
+                                        <span class="badge badge-pill badge-danger" ng-if="revision.concerns.q15_1_value">
+                                            {{ 'YES' | translate }}
+                                        </span>
+                                        <span class="badge badge-pill badge-success" ng-if="!revision.concerns.q15_1_value">
+                                            {{ 'NO' | translate }}
+                                        </span>
+                                        &nbsp;&nbsp;<i>{{revision.concerns.q15_1_explanation}}</i>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" ng-if="!$first">
+                                        <!-- devider -->
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" ng-if="!$first && status.concerns.comments">
+                                        <span class="comment" ng-if="revision.comments.q15_1_comment !== null && revision.comments.q15_1_comment !== ''">
+                                            <i class="fa fa-comment-o" aria-hidden="true"></i>&nbsp;&nbsp;{{revision.comments.q15_1_comment}}
+                                        </span>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" ng-if="$first" style="padding-bottom: 3px;">
+                                        <div class="input-group">
+                                            <span class="input-group-addon" style="background-color: #FFFFFF; width: 100%;">
+                                                <label class="custom-control custom-radio" style="margin-bottom: 0px;">
+                                                    <input
+                                                    class="custom-control-input"
+                                                    type="radio"
+                                                    name="q15_1_value"
+                                                    id="q15_1_value_1"
+                                                    ng-model="latest_revision.concerns.q15_1_value"
+                                                    ng-value="false"
+                                                    required>
+                                                    <span class="custom-control-indicator"></span>
+                                                    <span class="custom-control-description">
+                                                        <span class="badge badge-pill badge-success">
+                                                            {{ 'NO' | translate }}
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                            </span>
+                                            <span class="input-group-addon" style="background-color: #FFFFFF; width: 100%;">
+                                                <label class="custom-control custom-radio" style="margin-bottom: 0px;">
+                                                    <input
+                                                    class="custom-control-input"
+                                                    type="radio"
+                                                    name="q15_1_value"
+                                                    id="q15_1_value_1"
+                                                    ng-model="latest_revision.concerns.q15_1_value"
+                                                    ng-value="true"
+                                                    required>
+                                                    <span class="custom-control-indicator"></span>
+                                                    <span class="custom-control-description">
+                                                        <span class="badge badge-pill badge-danger">
+                                                            {{ 'YES' | translate }}
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" ng-if="$first">
+                                        <!-- devider -->
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" ng-if="$first">
+                                        <div class="form-group" ng-class="{'has-danger': editDocumentForm.q15_1_explanation.$invalid && !editDocumentForm.q15_1_explanation.$pristine }">
+                                            <div class="input-group" ng-if="latest_revision.concerns.q15_1_value">
+                                                <textarea
+                                                    class="form-control"
+                                                    rows="5"
+                                                    placeholder="{{ 'EXPLANATION' | translate }}*"
+                                                    name="q15_1_explanation"
+                                                    id="q15_1_explanation"
+                                                    ng-model="latest_revision.concerns.q15_1_explanation"
+                                                    ng-required="latest_revision.concerns.q15_1_value"></textarea>
+                                                <span class="input-group-addon">
+                                                    <span class="flag-icon flag-icon-gb"></span>
+                                                </span>
+                                            </div>
+                                            <span ng-show="editDocumentForm.q15_1_explanation.$error.required && !editDocumentForm.q15_1_explanation.$pristine" class="text-danger">
+                                                <small>
+                                                    {{ 'REQUIRED' | translate }}
+                                                </small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 15.2nd question -->
+                <div class="list-group-item">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 justified">
+                            <b>15.2. {{ 'CONCERN_15_2' | translate }}?</b>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                            <div ng-repeat="revision in document.revisions | orderBy: ['version']:true | limitTo: status.concerns.limit">
+                                <div class="row" ng-style="!$last && {'padding-bottom':'2px', 'border-bottom':'1px dashed rgba(0, 0, 0, .125)'}">
+                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                        <code>{{ 'REV' | translate}}{{revision.version}}</code>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" ng-if="!$first">
+                                        <span class="badge badge-pill badge-danger" ng-if="revision.concerns.q15_2_value">
+                                            {{ 'YES' | translate }}
+                                        </span>
+                                        <span class="badge badge-pill badge-success" ng-if="!revision.concerns.q15_2_value">
+                                            {{ 'NO' | translate }}
+                                        </span>
+                                        &nbsp;&nbsp;<i>{{revision.concerns.q15_2_explanation}}</i>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" ng-if="!$first">
+                                        <!-- devider -->
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" ng-if="!$first && status.concerns.comments">
+                                        <span class="comment" ng-if="revision.comments.q15_2_comment !== null && revision.comments.q15_2_comment !== ''">
+                                            <i class="fa fa-comment-o" aria-hidden="true"></i>&nbsp;&nbsp;{{revision.comments.q15_2_comment}}
+                                        </span>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" ng-if="$first" style="padding-bottom: 3px;">
+                                        <div class="input-group">
+                                            <span class="input-group-addon" style="background-color: #FFFFFF; width: 100%;">
+                                                <label class="custom-control custom-radio" style="margin-bottom: 0px;">
+                                                    <input
+                                                    class="custom-control-input"
+                                                    type="radio"
+                                                    name="q15_2_value"
+                                                    id="q15_2_value_1"
+                                                    ng-model="latest_revision.concerns.q15_2_value"
+                                                    ng-value="false"
+                                                    required>
+                                                    <span class="custom-control-indicator"></span>
+                                                    <span class="custom-control-description">
+                                                        <span class="badge badge-pill badge-success">
+                                                            {{ 'NO' | translate }}
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                            </span>
+                                            <span class="input-group-addon" style="background-color: #FFFFFF; width: 100%;">
+                                                <label class="custom-control custom-radio" style="margin-bottom: 0px;">
+                                                    <input
+                                                    class="custom-control-input"
+                                                    type="radio"
+                                                    name="q15_2_value"
+                                                    id="q15_2_value_1"
+                                                    ng-model="latest_revision.concerns.q15_2_value"
+                                                    ng-value="true"
+                                                    required>
+                                                    <span class="custom-control-indicator"></span>
+                                                    <span class="custom-control-description">
+                                                        <span class="badge badge-pill badge-danger">
+                                                            {{ 'YES' | translate }}
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" ng-if="$first">
+                                        <!-- devider -->
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" ng-if="$first">
+                                        <div class="form-group" ng-class="{'has-danger': editDocumentForm.q15_2_explanation.$invalid && !editDocumentForm.q15_2_explanation.$pristine }">
+                                            <div class="input-group" ng-if="latest_revision.concerns.q15_2_value">
+                                                <textarea
+                                                    class="form-control"
+                                                    rows="5"
+                                                    placeholder="{{ 'EXPLANATION' | translate }}*"
+                                                    name="q15_2_explanation"
+                                                    id="q15_2_explanation"
+                                                    ng-model="latest_revision.concerns.q15_2_explanation"
+                                                    ng-required="latest_revision.concerns.q15_2_value"></textarea>
+                                                <span class="input-group-addon">
+                                                    <span class="flag-icon flag-icon-gb"></span>
+                                                </span>
+                                            </div>
+                                            <span ng-show="editDocumentForm.q15_2_explanation.$error.required && !editDocumentForm.q15_2_explanation.$pristine" class="text-danger">
+                                                <small>
+                                                    {{ 'REQUIRED' | translate }}
+                                                </small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 15.3rd question -->
+                <div class="list-group-item">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 justified">
+                            <b>15.3. {{ 'CONCERN_15_3' | translate }}?</b>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                            <div ng-repeat="revision in document.revisions | orderBy: ['version']:true | limitTo: status.concerns.limit">
+                                <div class="row" ng-style="!$last && {'padding-bottom':'2px', 'border-bottom':'1px dashed rgba(0, 0, 0, .125)'}">
+                                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                        <code>{{ 'REV' | translate}}{{revision.version}}</code>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" ng-if="!$first">
+                                        <span class="badge badge-pill badge-danger" ng-if="revision.concerns.q15_3_value">
+                                            {{ 'YES' | translate }}
+                                        </span>
+                                        <span class="badge badge-pill badge-success" ng-if="!revision.concerns.q15_3_value">
+                                            {{ 'NO' | translate }}
+                                        </span>
+                                        &nbsp;&nbsp;<i>{{revision.concerns.q15_1_explanation}}</i>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" ng-if="!$first">
+                                        <!-- devider -->
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" ng-if="!$first && status.concerns.comments">
+                                        <span class="comment" ng-if="revision.comments.q15_3_comment !== null && revision.comments.q15_3_comment !== ''">
+                                            <i class="fa fa-comment-o" aria-hidden="true"></i>&nbsp;&nbsp;{{revision.comments.q15_3_comment}}
+                                        </span>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" ng-if="$first" style="padding-bottom: 3px;">
+                                        <div class="input-group">
+                                            <span class="input-group-addon" style="background-color: #FFFFFF; width: 100%;">
+                                                <label class="custom-control custom-radio" style="margin-bottom: 0px;">
+                                                    <input
+                                                    class="custom-control-input"
+                                                    type="radio"
+                                                    name="q15_3_value"
+                                                    id="q15_3_value_1"
+                                                    ng-model="latest_revision.concerns.q15_3_value"
+                                                    ng-value="false"
+                                                    required>
+                                                    <span class="custom-control-indicator"></span>
+                                                    <span class="custom-control-description">
+                                                        <span class="badge badge-pill badge-success">
+                                                            {{ 'NO' | translate }}
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                            </span>
+                                            <span class="input-group-addon" style="background-color: #FFFFFF; width: 100%;">
+                                                <label class="custom-control custom-radio" style="margin-bottom: 0px;">
+                                                    <input
+                                                    class="custom-control-input"
+                                                    type="radio"
+                                                    name="q15_3_value"
+                                                    id="q15_3_value_1"
+                                                    ng-model="latest_revision.concerns.q15_3_value"
+                                                    ng-value="true"
+                                                    required>
+                                                    <span class="custom-control-indicator"></span>
+                                                    <span class="custom-control-description">
+                                                        <span class="badge badge-pill badge-danger">
+                                                            {{ 'YES' | translate }}
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" ng-if="$first">
+                                        <!-- devider -->
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9" ng-if="$first">
+                                        <div class="form-group" ng-class="{'has-danger': editDocumentForm.q15_3_explanation.$invalid && !editDocumentForm.q15_3_explanation.$pristine }">
+                                            <div class="input-group" ng-if="latest_revision.concerns.q15_3_value">
+                                                <textarea
+                                                    class="form-control"
+                                                    rows="5"
+                                                    placeholder="{{ 'EXPLANATION' | translate }}*"
+                                                    name="q15_3_explanation"
+                                                    id="q15_3_explanation"
+                                                    ng-model="latest_revision.concerns.q15_3_explanation"
+                                                    ng-required="latest_revision.concerns.q15_3_value"></textarea>
+                                                <span class="input-group-addon">
+                                                    <span class="flag-icon flag-icon-gb"></span>
+                                                </span>
+                                            </div>
+                                            <span ng-show="editDocumentForm.q15_3_explanation.$error.required && !editDocumentForm.q15_3_explanation.$pristine" class="text-danger">
+                                                <small>
+                                                    {{ 'REQUIRED' | translate }}
+                                                </small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

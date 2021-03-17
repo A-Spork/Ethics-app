@@ -11,4 +11,6 @@ sql/schema/defaults.sql
 .securestorage.json
 .dejavuerc
 .idea/*
+templates/*
+config.js
 

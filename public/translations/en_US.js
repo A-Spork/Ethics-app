@@ -128,7 +128,7 @@ app.constant("en_US", {
     INTRODUCTION_TEXT_FRAGMENT_10: ' to use these Documents in your experiment.',
     INTRODUCTION_TEXT_FRAGMENT_11: 'The cover sheet',
     INTRODUCTION_TEXT_FRAGMENT_12: 'The cover sheet is handed in together with the signed Consent Forms to the secretariat. It will be filled out automatically. Please note that your forms will be rejected by the secretariat if the appropiate cover sheet is not supplied.',
-    
+
     STUDY_DESCRIPTION_FORM_TEXT: 'This form will be used to automatically generate the informed consent form that every participant of your study will have to sign. Please fill out the English version and optionally versions in other languages. Depending on the language(s) filled out, you will receive the informed consent forms in the chosen languages to be used during your experiment.',
     CHOOSE_LANGUAGE:'Please select the language(s), in which you want to generate the informed consent forms:',
     STUDY_CONCERNS_FORM_TEXT: 'Complete the checklist below. If you have answered yes to any of the questions, please provide a brief overview of how you are going to ensure ethical conduct with regard to the given risk. This will be reviewed by the Institutes Ethics-Committee. Remember that any ethical approval granted based on untrue or incomplete disclosure of your research procedure is invalid. The checklist is intended as a guideline and its role is to alert you in cases where you might be proposing an unethical study. Make sure you discuss any concerns with the members of the Intitutes\'s Ethics-Committee.',
@@ -237,6 +237,9 @@ app.constant("en_US", {
     CONCERN_12: 'Is any raw data from the study likely to be passed on to external partners',
     CONCERN_13: 'Does the study involve collection of any information without obtaining an Informed Consent in a situation different from public observations or anonymous street surveys',
     CONCERN_14: 'Do you use any additional forms/documents in your study that are relevant to evaluating ethical approval',
+    CONCERN_15_1: 'Will you publish your data, e.g. on the Open Science Framework, Github, or other repositories',
+    CONCERN_15_2: 'If yes: Describe how you will anonymise the data',
+    CONCERN_15_3: 'If yes: Provide a link to the repository where you will publish your data. You must create this repository now. This link will be copied onto the document that is given to the participants of your study',
 
     CONCERN_1_INFO: 'For instance: participants under the age of 18, participants with impairments, patients, people assisted by a carer, people recruited from groups associated with a specific mental or physical condition.',
     CONCERN_2_INFO: 'That is to say: Will participants be deliberately mislead in such a way that they might show distress or ask to retract their data when debriefed?',
@@ -253,12 +256,13 @@ app.constant("en_US", {
     CONCERN_12_INFO: 'For instance companies, funding bodies, other universities. If yes: who is responsible for the safety of the passed information?',
     CONCERN_13_INFO: 'Excluded cases (select \'no\'): remote sensing data, recordings from public settings allowed by the law, and other situations where the observed individual is expected to be aware of remaining in the public view. Continuous observation of targeted individuals, however, infringes this condition (similarly to how following someone physically in the public is different from observing the same person passing-by).',
     CONCERN_14_INFO: 'For instance: Additional Consent Forms to be signed by the participants',
+    CONCERN_15_1_INFO: 'This feature is currently unavailable, please disregard box 15.1, 15.2 and 15.3',
 
     SUBMIT_WARNING: 'You are about to finally submit your document for review by the Ethics-Committee. Please be aware that after this step your document can no longer be changed or modified. If your document is reviewed and accepted you can download your PDF files for your study. You will receive an email as soon as the status of your document has been changed. If want to revise it you need to ask your reviewer to get writing access again. After you revised your document, you need to submit it again. To avoid this, please make sure that all information is correct, before you submit to the Ethics-Committee.',
     AUTO_SAVING: 'Auto saving',
     AUTO_SAVING_HINT: 'You don\'t need to submit your document now! Everytime when you click on the \'Next page\' buttons in the previous pages (\'Study description\' and \'Study concerns\') all your information has been automatically saved in the background. As soon as you enter this page (\'Submit\'), you can savely logout and come back later to continue your work.',
     DOCUMENT_FILES: 'Download the associated Files',
-    
+
     CURRENTLY_ATTACHED_DOCUMENT: 'Currently the following document is provided: ',
     DELETE_ATTACHED_DOCUMENT: 'Delete Document',
 

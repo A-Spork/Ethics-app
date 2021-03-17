@@ -135,7 +135,13 @@ INSERT INTO Concerns (
     q13_value,
     q13_explanation,
     q14_value,
-    q14_explanation
+    q14_explanation,
+    q15_1_value,
+    q15_1_explanation,
+    q15_2_value,
+    q15_2_explanation,
+    q15_3_value,
+    q15_3_explanation
 ) VALUES ();
 
 
@@ -186,7 +192,10 @@ INSERT INTO Comments (
     q11_2_comment,
     q12_comment,
     q13_comment,
-    q14_comment
+    q14_comment,
+    q15_1_comment,
+    q15_2_comment,
+    q15_3_comment
 ) VALUES ();
 
 

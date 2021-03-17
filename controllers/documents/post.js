@@ -173,6 +173,12 @@ exports.request = function(req, res) {
                 null,
                 null,
                 null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
                 null
             ], function(err, result) {
                 done();
@@ -235,7 +241,8 @@ exports.request = function(req, res) {
                 html: output
             }, function(err, info) {
                 if (err) {
-                    callback(err);
+		    err.message = JSON.stringify(info);
+                    callback(err, 500);
                 } else {
                     callback(null, 201, document);
                 }
